@@ -1,0 +1,87 @@
+body{
+    margin: 0%;
+    padding: 0;
+    background-color: darkgrey;
+
+}
+.header {
+    background-color: #FFFFFF; /* Ajoutez votre couleur de fond ici (#FFFFFF représente le blanc) */
+    padding: 10px 20px; /* Ajoutez des marges intérieures pour l'espace autour du contenu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav ul li {
+    margin-right: 20px; /* Ajoutez un espacement entre les éléments de la liste */
+  }
+  
+  .nav ul li:last-child {
+    margin-right: 0; /* Supprimez la marge à droite du dernier élément de la liste */
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: black; /* Couleur du texte pour les liens */
+  }
+
+.image-container{
+    display: flex;
+    background-color: rgb(9, 57, 9);
+    flex-direction: row;
+    width: 100%;
+    color: rgb(245, 240, 240);                     
+    text-decoration: none;    
+    
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: #404a40;
+    font-size: 55PX;
+    font-family: cursive;
+  }
+  .title2{
+    text-align: center;
+  } 
+  .small-image {
+    display: block;
+    Width: 500px; /* Définissez la largeur maximale des images selon vos besoins */
+    height: auto; /* Laissez la hauteur ajustée automatiquement pour maintenir les proportions de l'image */
+    margin-right: 10px; /* Ajoutez une marge à droite entre les images */
+    margin-bottom: 5px; 
+}
+
+  .images-container2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: rgb(245, 240, 240);                     
+    text-decoration: none;    
+    align-items: center; 
+}
+.image-wrapper p {
+    font-size: 20px;
+    color: #000000;
+}
+
+.contien {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
