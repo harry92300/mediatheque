@@ -6,6 +6,8 @@ import Book1 from '../image/book1.jpg';
 import Book2 from '../image/book2.jpg';
 import Book3 from '../image/book3.jpg';
 import Petit from '../image/Petit-pays.jpg';
+import Lait from '../image/Lait-et-miel-Milk-and-honey.jpg';
+import Promi from '../image/Promis-ca-va-aller.jpg';
 
 
 
@@ -48,12 +50,54 @@ function Acc() {
                 </div>
    
 </div>
-<h3 className="title3">de la bonne literature</h3>
+<h3 className="title3">Voici nos 3 meilleur ventes de l'année</h3>
 <div className='contien'>
- <img src={Petit} alt="Livre 3" className="small-image" />
- <img src={Petit} alt="Livre 3" className="small-image" />
- <img src={Petit} alt="Livre 3" className="small-image" />
+<div className='contien'>
+                <div className="image-wrapper">
+                    <img src={Petit} alt="Livre 1" className="small-image" />
+                    <button className="button">Roman</button>
+                    <p>Gaël Faye (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Lait} alt="Livre 2" className="small-image" />
+                    <button className="button">Poésie</button>
+                    <p>Rupi Kaur (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Promi} alt="Livre 3" className="small-image" />
+                    <button className="button">Guide</button>
+                    <p>Robert Laffont (Auteur) </p>
+                </div>
+            </div>
+
+          
+</div> 
+<div className="footer">
+    <div className="map-container">
+        {/* Intégrez ici votre carte Google Maps */}
+        <iframe
+            title="Google Maps"
+            src="https://maps.app.goo.gl/eYsTWth6AFNtWYfj6"
+            width="400"
+            height="300"
+            allowFullScreen=""
+            loading="lazy"
+        ></iframe>
+    </div>
+    <div className="contact-info">
+        <h2>Contactez-nous</h2>
+        <p>Réseaux sociaux :</p>
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+        <p>Numéro de téléphone : 123-456-7890</p>
+    </div>
 </div>
+
 
 
             

@@ -53,9 +53,13 @@ body{
     color: #404a40;
     font-size: 55PX;
     font-family: cursive;
+    margin-bottom: 18%;
   }
   .title2{
     text-align: center;
+    margin-bottom: 18%;
+    font-size: 38px;
+   
   } 
   .small-image {
     display: block;
@@ -76,12 +80,75 @@ body{
 .image-wrapper p {
     font-size: 20px;
     color: #000000;
+    margin-bottom: 50%;
+    
 }
 
 .contien {
     display: flex;
     justify-content: space-between;
   }
+
+  .button {
+    background-color: #007bff; /* Couleur de fond du bouton (bleu dans cet exemple) */
+    color: #ffffff; /* Couleur du texte du bouton (blanc dans cet exemple) */
+    border: none; /* Supprime le bord du bouton */
+    padding: 10px 20px; /* Ajoute du rembourrage au bouton */
+    cursor: pointer; /* Change le curseur au survol pour indiquer qu'il est cliquable */
+    border-radius: 5px; /* Ajoute un coin arrondi au bouton */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+.title3{
+    margin-bottom: 12%;
+    text-align: center;
+    font-size: 35px;
+
+}
+/* Footer.css */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.map-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
 
 
 
