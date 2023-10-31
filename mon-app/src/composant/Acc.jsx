@@ -15,21 +15,6 @@ import Promi from '../image/Promis-ca-va-aller.jpg';
 function Acc() {
     return (
         <div>
-            <header className="header">
-                <div className="logo">
-                    <video width="100" height="100" controls>
-                        <source src={Logo} type="video/mp4" />
-                    </video>
-                </div>
-                <nav className="nav">
-                    <ul>
-                        <li><a href="/">Inscription</a></li>
-                        <li><a href="/">Connexion</a></li>
-                        <li><a href="/">Catégorie de Livre</a></li>
-                    </ul>
-                </nav>
-            </header>
-
             <div className="image-container">
             <img src={Book} alt="images" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
             <h1 className="title">de la bonne literature</h1>
