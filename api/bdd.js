@@ -18,12 +18,12 @@ app.use(bodyParser.json());
 
 // Route pour créer un nouveau livre
 app.post('/livres', (req, res) => {
-  const { titre, auteur, annee } = req.body;
-  connection.query('INSERT INTO livres (titre, auteur, annee) VALUES (?, ?, ?)', [titre, auteur, annee], (err, results) => {
+  const { titre, auteur, annee, empruntee, rendu } = req.body;
+  connection.query('INSERT INTO livres (titre, auteur, annee, empruntee, rendu) VALUES (?, ?, ?)', [titre, auteur, annee], (err, results) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
-      res.json({ id: results.insertId, titre, auteur, annee });
+      res.json({ id: results.insertId, titre, auteur, annee, empruntee, rendu });
     }
   });
 });
