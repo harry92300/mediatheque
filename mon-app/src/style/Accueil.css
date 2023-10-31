@@ -5,8 +5,8 @@ body{
 
 }
 .header {
-    background-color: #FFFFFF; /* Ajoutez votre couleur de fond ici (#FFFFFF représente le blanc) */
-    padding: 10px 20px; /* Ajoutez des marges intérieures pour l'espace autour du contenu */
+    background-color: #FFFFFF; 
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,16 +22,16 @@ body{
   }
   
   .nav ul li {
-    margin-right: 20px; /* Ajoutez un espacement entre les éléments de la liste */
+    margin-right: 20px; 
   }
   
   .nav ul li:last-child {
-    margin-right: 0; /* Supprimez la marge à droite du dernier élément de la liste */
+    margin-right: 0; 
   }
   
   .nav ul li a {
     text-decoration: none;
-    color: black; /* Couleur du texte pour les liens */
+    color: black; 
   }
 
 .image-container{
@@ -63,9 +63,9 @@ body{
   } 
   .small-image {
     display: block;
-    Width: 500px; /* Définissez la largeur maximale des images selon vos besoins */
-    height: auto; /* Laissez la hauteur ajustée automatiquement pour maintenir les proportions de l'image */
-    margin-right: 10px; /* Ajoutez une marge à droite entre les images */
+    Width: 500px;
+    height: auto; 
+    margin-right: 10px; 
     margin-bottom: 5px; 
 }
 
@@ -90,16 +90,16 @@ body{
   }
 
   .button {
-    background-color: #007bff; /* Couleur de fond du bouton (bleu dans cet exemple) */
-    color: #ffffff; /* Couleur du texte du bouton (blanc dans cet exemple) */
-    border: none; /* Supprime le bord du bouton */
-    padding: 10px 20px; /* Ajoute du rembourrage au bouton */
-    cursor: pointer; /* Change le curseur au survol pour indiquer qu'il est cliquable */
-    border-radius: 5px; /* Ajoute un coin arrondi au bouton */
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 5px; 
 }
 
 .button:hover {
-    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+    background-color: #0056b3;
 }
 .title3{
     margin-bottom: 12%;
@@ -147,8 +147,35 @@ iframe {
     border: none;
 }
 
+@media (max-width: 768px) {
+    .title3 {
+        font-size: 18px;
+    }
+
+    .small-image {
+        width: 100px; 
+    }
+
+    .button {
+        font-size: 14px; 
+    }
+
+    .image-wrapper {
+        margin-bottom: 20px; 
+    }
+}
 
 
+@media (max-width: 480px) {
+    .title3 {
+        font-size: 16px; /* Réduire davantage la taille du titre pour les petits écrans */
+    }
 
+    .small-image {
+        width: 80px; /* Réduire la taille des images pour les petits écrans */
+    }
 
-
+    .button {
+        font-size: 12px; /* Réduire la taille du texte du bouton pour les petits écrans */
+    }
+}

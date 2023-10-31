@@ -23,9 +23,9 @@ function Acc() {
                 </div>
                 <nav className="nav">
                     <ul>
-                        <li><a href="#">Inscription</a></li>
-                        <li><a href="#">Connexion</a></li>
-                        <li><a href="#">Catégorie de Livre</a></li>
+                        <li><a href="/">Inscription</a></li>
+                        <li><a href="/">Connexion</a></li>
+                        <li><a href="/">Catégorie de Livre</a></li>
                     </ul>
                 </nav>
             </header>

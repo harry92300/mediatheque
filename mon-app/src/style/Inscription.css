@@ -1,0 +1,71 @@
+body{
+    margin: 0%;
+    padding: 0;
+
+}
+h1{
+    color: yellow;
+}
+.bloks3{
+    display: flex;
+    background-color: #20835D;
+    flex-direction: row;
+    width: 100%;
+}
+.mop1{
+    margin-left: 30%;
+    color: #DACA3B;
+    font-family: Gravitas One;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+
+b {
+    margin: 20%;
+}
+select {
+    margin-left: 15%;
+}
+
+.m3a{
+
+    background-color: #FFFFFF;
+    background: #DACA3B;
+    height: 60px;
+    top: 5043px;
+    left: 1020px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-left: 35%;
+    
+}
+
+@media (max-width: 128px) {
+    .bloks3 {
+        /* Styles spécifiques pour les écrans de téléphone */
+        flex-direction: column; /* Afficher les éléments en colonne */
+    }
+    
+    .responsive-image {
+        max-width: 100%;
+        width: 1219px;
+    }
+    
+    /* ... Autres styles spécifiques pour les écrans de téléphone ... */
+}
