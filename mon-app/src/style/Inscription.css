@@ -3,9 +3,7 @@ body{
     padding: 0;
 
 }
-h1{
-    color: yellow;
-}
+
 .bloks3{
     display: flex;
     background-color: #20835D;
@@ -55,6 +53,38 @@ select {
     margin-left: 35%;
     
 }
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.map-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 5px;
+}
+
 
 @media (max-width: 128px) {
     .bloks3 {

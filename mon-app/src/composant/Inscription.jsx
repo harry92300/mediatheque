@@ -6,12 +6,7 @@ import Inscri from '../image/Inscri.jpg'
 export default function Inscription() {
     return (
         <div>
-            <ul className="nav-links2">
-                <li><h1>Connectify</h1></li>
-                <li><Link to='/' className="link yellow-link" >Accueil</Link></li>
-                <li><Link to='/connexion' className="link" >Connexion</Link></li>
-                <li><Link to='/inscription' className="link" >Inscription</Link></li>
-            </ul>
+           
             <div className="bloks3">
                 <img src={Inscri} alt="images" className="responsive-image" width="750px" height="920px" style={{ maxWidth: '750px' }} />
                 <div id="container">
@@ -46,9 +41,30 @@ export default function Inscription() {
                     <p className="inscription-link">Déjà inscrit ? <Link to="/connexion">Connectez-vous</Link></p>
                 </div>
             </div>
-            <footer>
-                
-            </footer>
+            <div className="footer">
+    <div className="map-container">
+        {/* Intégrez ici votre carte Google Maps */}
+        <iframe
+            title="Google Maps"
+            src="https://maps.app.goo.gl/eYsTWth6AFNtWYfj6"
+            width="400"
+            height="300"
+            allowFullScreen=""
+            loading="lazy"
+        ></iframe>
+    </div>
+    <div className="contact-info">
+        <h2>Contactez-nous</h2>
+        <p>Réseaux sociaux :</p>
+        <ul>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+        <p>Numéro de téléphone : 123-456-7890</p>
+    </div>
+</div>
+
         </div>
     );
 }
