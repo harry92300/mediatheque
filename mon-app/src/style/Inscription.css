@@ -3,10 +3,12 @@ body{
     padding: 0;
 
 }
-
+h1{
+    color: yellow;
+}
 .bloks3{
     display: flex;
-    background-color: #20835D;
+    background-color: #191b2b;
     flex-direction: row;
     width: 100%;
 }
@@ -53,43 +55,11 @@ select {
     margin-left: 35%;
     
 }
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.map-container {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.contact-info {
-    flex: 1;
-}
-
-.contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    margin-bottom: 5px;
-}
-
 
 @media (max-width: 128px) {
     .bloks3 {
-        /* Styles spécifiques pour les écrans de téléphone */
-        flex-direction: column; /* Afficher les éléments en colonne */
+       
+        flex-direction: column; 
     }
     
     .responsive-image {
@@ -97,5 +67,5 @@ select {
         width: 1219px;
     }
     
-    /* ... Autres styles spécifiques pour les écrans de téléphone ... */
+  
 }

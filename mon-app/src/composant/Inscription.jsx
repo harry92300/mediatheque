@@ -43,7 +43,7 @@ export default function Inscription() {
             </div>
             <div className="footer">
     <div className="map-container">
-        {/* Intégrez ici votre carte Google Maps */}
+       
         <iframe
             title="Google Maps"
             src="https://maps.app.goo.gl/eYsTWth6AFNtWYfj6"
@@ -61,7 +61,7 @@ export default function Inscription() {
         <li><a href="https://twitter.com/">Twitter</a></li>
         <li><a href="https://www.instagram.com/">Instagram</a></li>
         </ul>
-        <p>Numéro de téléphone : 123-456-7890</p>
+        <p>Numéro de téléphone : 33+ 1 23 34 45 56 </p>
     </div>
 </div>
 
