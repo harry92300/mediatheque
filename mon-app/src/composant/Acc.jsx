@@ -1,6 +1,5 @@
 import React from 'react';
 import '../style/Accueil.css';
-import Logo from '../image/La de lecture bonne literature.mp4';
 import Book from '../image/book-863418_1280.jpg';
 import Book1 from '../image/book1.jpg';
 import Book2 from '../image/book2.jpg';

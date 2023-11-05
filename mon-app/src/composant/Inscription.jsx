@@ -34,7 +34,6 @@ export default function Inscription() {
                             <input type="checkbox" checked="checked" name="remember" style={{ marginBottom: '15px' }} /> Souviens-toi de moi
                         </label>
 
-                        <p>En créant un compte, vous acceptez nos<a href="#" style={{ color: 'dodgerblue' }}>conditions et confidentialité</a>.</p>
 
                         <div className="clearfix">
                             <button type="button" className="cancelbtn">Annuler</button>

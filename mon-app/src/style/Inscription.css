@@ -4,7 +4,7 @@ body{
 
 }
 h1{
-    color: yellow;
+    color: rgb(18, 18, 9);
     text-align: center;
 }
 .bloks3{
@@ -32,7 +32,7 @@ select {
 .m3a{
 
     background-color: #FFFFFF;
-    background: #DACA3B;
+    background: #121109;
     height: 60px;
     top: 5043px;
     left: 1020px;
@@ -135,8 +135,8 @@ button:hover {
   
   @media (max-width: 768px) {
     .container {
-      position: static; /* Changez la position en statique pour qu'elle suive le flux du document */
-      transform: none; /* Réinitialisez la transformation pour centrer correctement sur les petits écrans */
+      position: static; 
+      transform: none; 
     }
   }
   

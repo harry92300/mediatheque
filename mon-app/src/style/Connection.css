@@ -1,0 +1,113 @@
+body{
+    margin: 0%;
+    padding: 0;
+
+}
+
+.bloks2{
+    display: flex;
+    background-color: #6f7288;
+    flex-direction: row;
+    width: 100%;
+}
+.nav-links2 {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin: 0%;
+    padding-bottom: 2%;
+    height: 80px;   
+    background-color: #20835D;      
+} 
+.mop{
+    margin-left: 30%;
+    color: #0d0d08;
+    font-family: Gravitas One;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.link {    
+                       
+    color: rgb(245, 240, 240);                     
+    text-decoration: none;               
+}
+.inscription-link{
+    margin-left: 30%;
+    padding-bottom: 12%;
+}
+#container{
+    width:40%;
+    height: 35%;
+    margin:0 auto;
+    margin-top:10%;
+    background-color: #becccb;
+   }
+input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+   }
+   input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+   }
+   input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   }
+
+   @media (max-width: 768px) {
+    .nav-links2
+    .bloks2
+    .connecy{
+      max-width: 100%; 
+      height: 100vh; 
+
+    }
+  }
+  @media only screen and (max-width:800px) {
+    /* For tablets: */
+    .container {
+        max-width: 100%; 
+        height: 100vh; 
+    }
+    .container {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 390px){
+    
+    .container {
+        max-width: 100%; 
+        height: 100vh; 
+    }
+    .container {
+      width: 100%;
+    }
+    .bloks2 {
+        display: block;
+        background-color: rgb(9, 57, 9);
+        flex-direction: row;
+        width: 100%;
+    }
+    #container {
+        height: 35%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background-color: #becccb;
+        width: 100%;
+    }
+  }
