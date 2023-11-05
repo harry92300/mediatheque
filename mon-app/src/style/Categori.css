@@ -1,0 +1,14 @@
+.categories-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .categories-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-icon {
+    margin-right: 10px;
+  }
+  

@@ -13,8 +13,9 @@ export default function Header() {
         <nav className="nav">
             <ul>
                 <li><Link to="/inscription">Inscription</Link></li>
-                <li><a href="/">Connexion</a></li>
-                <li><a href="/">Catégorie de Livre</a></li>
+                <li><a href="/Connexion">Connexion</a></li>
+                <li><a href="/Catégorie de Livre">Catégorie de Livre</a></li>
+                <li><a href="/">bienvenue</a></li>
             </ul>
         </nav>
     </header>
