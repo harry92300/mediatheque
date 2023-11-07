@@ -43,23 +43,10 @@ select {
 
 
 
-@media (max-width: 128px) {
-    .bloks3 {
-       
-        flex-direction: column; 
-    }
-    
-    .responsive-image {
-        max-width: 100%;
-        width: 1219px;
-    }
-    
-  
-}
 
 * {box-sizing: border-box}
 
-/* Full-width input fields */
+
   input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -79,7 +66,7 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
+
 button {
   background-color: #04AA6D;
   color: white;
@@ -95,19 +82,19 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
+
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
+
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* Add padding to container elements */
+
 .container {
   padding: 16px;
   display: block;
@@ -120,23 +107,36 @@ button:hover {
   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
-}
-
-
-
-
-
+@media only screen and (max-width:800px) {
   
-  
-  @media (max-width: 768px) {
     .container {
-      position: static; 
-      transform: none; 
+        max-width: 100%; 
+        height: 100vh; 
+    }
+    .container {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 390px){
+    
+    .container {
+        max-width: 100%; 
+        height: 100vh; 
+    }
+    .container {
+      width: 100%;
+    }
+    .bloks3 {
+        display: block;
+        flex-direction: row;
+        width: 100%;
+    }
+    #container {
+        height: 35%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background-color: #1D5A43;
+        width: 100%;
     }
   }
   

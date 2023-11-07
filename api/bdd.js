@@ -16,7 +16,31 @@ const connection = require('./db'); // Assurez-vous que le chemin du fichier de 
 const app = express();
 app.use(bodyParser.json());
 
-// Route pour créer un nouveau livre
+app.post('/utilisateurs', (req, res) => {
+  const { nom, prenom, email, motdepasse } = req.body;
+  connection.query('INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasse], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json({ id: results.insertId, nom, prenom, email, motdepasse });
+    }
+  });
+});
+
+
+app.get('/utilisateurs', (req, res) => {
+  connection.query('SELECT * FROM utilisateurs', (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+
+
+
 app.post('/livres', (req, res) => {
   const { titre, auteur, annee, empruntee, rendu } = req.body;
   connection.query('INSERT INTO livres (titre, auteur, annee, empruntee, rendu) VALUES (?, ?, ?)', [titre, auteur, annee], (err, results) => {
@@ -27,6 +51,7 @@ app.post('/livres', (req, res) => {
     }
   });
 });
+
 
 // Route pour récupérer tous les livres
 app.get('/livres', (req, res) => {
