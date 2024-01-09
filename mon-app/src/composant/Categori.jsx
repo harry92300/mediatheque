@@ -1,31 +1,99 @@
 import React from 'react';
 import '../style/Categori.css';
-import Carrousel1 from '../image/carrousel1.jpg'
-import Carrousel2 from '../image/carrousel2.jpg'
-import Carrousel3 from '../image/carrousel3.jpg'
+import Carrousel1 from '../image/carrousel1.jpg';
+import Devello from '../image/Captive-tome-1.jpg';
+import She from '../image/sheHULG.jpeg';
+import Carrou from '../image/Devellopemntpersonnel.jpg'
 
-
-export default function Categori() {
+const Categori = () => {
   return (
+    <div className="categories-container">
+      <div className='image1'>
+        <img src={Carrousel1} alt="images" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
+      </div>
+
+      <div className='exposition'>
+        <h2 className='mesCategori'>Nos Livres</h2>
+      </div>
+  
+      <div className='contien'>
+                <div className="image-wrapper">
+                    <img src={Devello} alt="Livre 1" className="small-image" />
+                    <button className="button">Roman</button>
+                    <p>Gaël Faye (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={She} alt="Livre 2" className="small-image" />
+                    <button className="button">Poésie</button>
+                    <p>Rupi Kaur (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Carrou} alt="Livre 3" className="small-image" />
+                    <button className="button">Guide</button>
+                    <p>Robert Laffont (Auteur) </p>
+                </div>
+                
+            </div>
+
+        <button class="favorite styled" type="button">Add to favorites</button>
+        <button class="favorite styled" type="button">Add to favorites</button>
+        <button class="favorite styled" type="button">Add to favorites</button>
+
+        <div className='contien'>
+                <div className="image-wrapper">
+                    <img src={Devello} alt="Livre 1" className="small-image" />
+                    <button className="button">Roman</button>
+                    <p>Gaël Faye (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={She} alt="Livre 2" className="small-image" />
+                    <button className="button">Poésie</button>
+                    <p>Rupi Kaur (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Carrou} alt="Livre 3" className="small-image" />
+                    <button className="button">Guide</button>
+                    <p>Robert Laffont (Auteur) </p>
+                </div>
+            </div>
+
+
+            <div className='contien'>
+                <div className="image-wrapper">
+                    <img src={Devello} alt="Livre 1" className="small-image" />
+                    <button className="button">Roman</button>
+                    <p>Gaël Faye (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={She} alt="Livre 2" className="small-image" />
+                    <button className="button">Poésie</button>
+                    <p>Rupi Kaur (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Carrou} alt="Livre 3" className="small-image" />
+                    <button className="button">Guide</button>
+                    <p>Robert Laffont (Auteur) </p>
+                </div>
+            </div>
+
+
+          
+
+
+
+
+
+
+    </div>
 
     
-    <div className="categories-container">
-      <h2 className='mesCategori'>Catégories de Livres</h2>
-
-      <div className='image1'>
-      <img src={Carrousel1} alt="images" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
-      <img src={Carrousel2} alt="images2" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
-      <img src={Carrousel3} alt="images3" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
-
-      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-
-  </div>
-
-
-
-
-      
-    </div>
   );
-}
+};
+
+export default Categori;
