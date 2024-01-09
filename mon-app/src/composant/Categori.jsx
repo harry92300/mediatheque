@@ -19,27 +19,24 @@ const Categori = () => {
       <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Devello} alt="Livre 1" className="small-image" />
-                    <button className="button">Roman</button>
-                    <p>Gaël Faye (Auteur) </p>
+                    <button class="favorite styled" type="button">Fiction pour jeunes adultes</button>
+                    <p>Sarah Rivens(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image" />
-                    <button className="button">Poésie</button>
-                    <p>Rupi Kaur (Auteur) </p>
+                    <button class="favorite styled" type="button"> Comics, Super-héros</button>
+                    <p>Stan Lee et Juan Bobillo(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image" />
-                    <button className="button">Guide</button>
-                    <p>Robert Laffont (Auteur) </p>
+                    <button class="favorite styled" type="button">Sciences humaines</button>
+                    <p>Robert Mercier (Auteur) </p>
                 </div>
 
             </div>
 
-        <button class="favorite styled" type="button">Add to favorites</button>
-        <button class="favorite styled" type="button">Add to favorites</button>
-        <button class="favorite styled" type="button">Add to favorites</button>
 
         <div className='contien'>
                 <div className="image-wrapper">
@@ -81,6 +78,29 @@ const Categori = () => {
                     <p>Robert Laffont (Auteur) </p>
                 </div>
             </div>
+
+
+            <div className='contien'>
+                <div className="image-wrapper">
+                    <img src={Devello} alt="Livre 1" className="small-image" />
+                    <button class="favorite styled" type="button">Add to favorites</button>
+                    <p>Gaël Faye (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={She} alt="Livre 2" className="small-image" />
+                    <button class="favorite styled" type="button">Add to favorites</button>
+                    <p>Rupi Kaur (Auteur) </p>
+                </div>
+                
+                <div className="image-wrapper">
+                    <img src={Carrou} alt="Livre 3" className="small-image" />
+                    <button class="favorite styled" type="button">Add to favorites</button>
+                    <p>Robert Laffont (Auteur) </p>
+                </div>
+            </div>
+
+
 
 
           
