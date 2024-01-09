@@ -34,7 +34,7 @@ const Categori = () => {
                     <button className="button">Guide</button>
                     <p>Robert Laffont (Auteur) </p>
                 </div>
-                
+
             </div>
 
         <button class="favorite styled" type="button">Add to favorites</button>
@@ -44,19 +44,19 @@ const Categori = () => {
         <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Devello} alt="Livre 1" className="small-image" />
-                    <button className="button">Roman</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Gaël Faye (Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image" />
-                    <button className="button">Poésie</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Rupi Kaur (Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image" />
-                    <button className="button">Guide</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Robert Laffont (Auteur) </p>
                 </div>
             </div>
@@ -65,19 +65,19 @@ const Categori = () => {
             <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Devello} alt="Livre 1" className="small-image" />
-                    <button className="button">Roman</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Gaël Faye (Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image" />
-                    <button className="button">Poésie</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Rupi Kaur (Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image" />
-                    <button className="button">Guide</button>
+                    <button class="favorite styled" type="button">Add to favorites</button>
                     <p>Robert Laffont (Auteur) </p>
                 </div>
             </div>
