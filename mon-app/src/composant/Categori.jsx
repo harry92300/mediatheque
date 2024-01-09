@@ -10,6 +10,10 @@ import Reve from '../image/Reve.jpeg'
 import Baki from '../image/Baki.jpeg'
 import Cedric from '../image/Cedric.jpeg'
 import Nancy from '../image/Nancy.jpeg'
+import Charlie from '../image/Charlie.jpeg'
+import Haiti from '../image/Haiti.jpeg'
+import Espace from '../image/Espace.jpeg'
+
 
 
 
@@ -90,21 +94,21 @@ const Categori = () => {
 
             <div className='contien'>
                 <div className="image-wrapper">
-                    <img src={Devello} alt="Livre 1" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Gaël Faye (Auteur) </p>
+                    <img src={Charlie} alt="Livre 1" className="small-image" />
+                    <button class="favorite styled" type="button">Loisirs</button>
+                    <p>Martin Handford(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={She} alt="Livre 2" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Rupi Kaur (Auteur) </p>
+                    <img src={Haiti} alt="Livre 2" className="small-image" />
+                    <button class="favorite styled" type="button">Histoire littéraire</button>
+                    <p>Anthony Sr Kavanagh(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Carrou} alt="Livre 3" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Robert Laffont (Auteur) </p>
+                    <img src={Espace} alt="Livre 3" className="small-image" />
+                    <button class="favorite styled" type="button"> Science-fiction</button>
+                    <p>Colin Greenland(Auteur) </p>
                 </div>
             </div>
 
