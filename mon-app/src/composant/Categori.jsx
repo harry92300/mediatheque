@@ -4,6 +4,9 @@ import Carrousel1 from '../image/carrousel1.jpg';
 import Devello from '../image/Captive-tome-1.jpg';
 import She from '../image/sheHULG.jpeg';
 import Carrou from '../image/Devellopemntpersonnel.jpg'
+import Chat from '../image/leChatDuBois.jpeg'
+import Messi from '../image/Messi.jpeg'
+import Reve from '../image/Reve.jpeg'
 
 const Categori = () => {
   return (
@@ -40,21 +43,21 @@ const Categori = () => {
 
         <div className='contien'>
                 <div className="image-wrapper">
-                    <img src={Devello} alt="Livre 1" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Gaël Faye (Auteur) </p>
+                    <img src={Chat} alt="Livre 1" className="small-image" />
+                    <button class="favorite styled" type="button"> Poésie</button>
+                    <p>Marie Boulic(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={She} alt="Livre 2" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Rupi Kaur (Auteur) </p>
+                    <img src={Messi} alt="Livre 2" className="small-image" />
+                    <button class="favorite styled" type="button"> Sports</button>
+                    <p>Guillem Balagué(Auteur) </p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Carrou} alt="Livre 3" className="small-image" />
-                    <button class="favorite styled" type="button">Add to favorites</button>
-                    <p>Robert Laffont (Auteur) </p>
+                    <img src={Reve} alt="Livre 3" className="small-image" />
+                    <button class="favorite styled" type="button"> Arts décoratifs</button>
+                    <p>Sibylline Meynet(Auteur) </p>
                 </div>
             </div>
 
