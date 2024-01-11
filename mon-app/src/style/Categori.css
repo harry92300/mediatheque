@@ -88,29 +88,20 @@ body{
       inset -2px -2px 3px rgba(255, 255, 255, 0.6),
       inset 2px 2px 3px rgba(0, 0, 0, 0.6);
   }
+
+  .price {
+    font-weight: bold; /* Exemple de style - à personnaliser selon vos besoins */
+    color: #008000; /* Exemple de style - à personnaliser selon vos besoins */
+  }
   
   
 #carousel{
     width: 1240px;
     overflow: auto;
 }
-@keyframes lesImages{
-    0%{
-        transform: translateX(0);
-    }
-    26%{
-        transform: translateX(-640px);
-    }
-    50%{
-        transform: translateX(-1280px);
-    }
-    75%{
-        transform: translateX(-1920px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
+
+
+
 .carousel-image {
   width: 100%;
   height: auto;
@@ -121,3 +112,11 @@ body{
     width: 50%; /* Ajustez cette valeur selon vos besoins */
   }
 }
+
+
+
+
+
+
+
+

@@ -27,6 +27,14 @@ const Categori = () => {
       <div className='exposition'>
         <h2 className='mesCategori'>Nos Livres</h2>
       </div>
+
+
+
+
+
+
+
+
   
       <div className='contien'>
                 <div className="image-wrapper">
@@ -109,11 +117,35 @@ const Categori = () => {
                     <img src={Espace} alt="Livre 3" className="small-image" />
                     <button class="favorite styled" type="button"> Science-fiction</button>
                     <p>Colin Greenland(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
             </div>
 
 
 
+            <div className="footer">
+    <div className="map-container">
+        {/* Intégrez ici votre carte Google Maps */}
+        <iframe
+            title="Google Maps"
+            src="https://maps.app.goo.gl/eYsTWth6AFNtWYfj6"
+            width="400"
+            height="300"
+            allowFullScreen=""
+            loading="lazy"
+        ></iframe>
+    </div>
+    <div className="contact-info">
+        <h2>Contactez-nous</h2>
+        <p>Réseaux sociaux :</p>
+        <ul>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+        <p>Numéro de téléphone : 33+ 1 23 34 45 56</p>
+    </div>
+</div>
 
           
 
