@@ -41,18 +41,21 @@ const Categori = () => {
                     <img src={Devello} alt="Livre 1" className="small-image" />
                     <button class="favorite styled" type="button">Fiction pour jeunes adultes</button>
                     <p>Sarah Rivens(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image" />
                     <button class="favorite styled" type="button"> Comics, Super-héros</button>
                     <p>Stan Lee et Juan Bobillo(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image" />
                     <button class="favorite styled" type="button">Sciences humaines</button>
                     <p>Robert Mercier (Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
 
             </div>
