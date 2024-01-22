@@ -63,18 +63,21 @@ const Categori = () => {
                     <img src={Chat} alt="Livre 1" className="small-image" />
                     <button class="favorite styled" type="button"> Poésie</button>
                     <p>Marie Boulic(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Messi} alt="Livre 2" className="small-image" />
                     <button class="favorite styled" type="button"> Sports</button>
                     <p>Guillem Balagué(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Reve} alt="Livre 3" className="small-image" />
                     <button class="favorite styled" type="button"> Arts décoratifs</button>
                     <p>Sibylline Meynet(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
             </div>
 
@@ -84,18 +87,21 @@ const Categori = () => {
                     <img src={Baki} alt="Livre 1" className="small-image" />
                     <button class="favorite styled" type="button">Mangas</button>
                     <p>Keisuke Itagaki(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Cedric} alt="Livre 2" className="small-image" />
                     <button class="favorite styled" type="button"> BDs humoristiques</button>
                     <p>Laudec et Raoul Cauvin(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Nancy} alt="Livre 3" className="small-image" />
                     <button class="favorite styled" type="button"> Littérature anglo-saxonne</button>
                     <p>Nancy Tucker(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
             </div>
 
@@ -105,12 +111,14 @@ const Categori = () => {
                     <img src={Charlie} alt="Livre 1" className="small-image" />
                     <button class="favorite styled" type="button">Loisirs</button>
                     <p>Martin Handford(Auteur) </p>
+                    <p className="price">Prix : 1 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Haiti} alt="Livre 2" className="small-image" />
                     <button class="favorite styled" type="button">Histoire littéraire</button>
                     <p>Anthony Sr Kavanagh(Auteur) </p>
+                    <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
