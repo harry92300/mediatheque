@@ -16,6 +16,7 @@ import Espace from '../image/Espace.jpeg';
 
 
 
+
 const Categori = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -169,6 +170,7 @@ const books = [
             height="300"
             allowFullScreen=""
             loading="lazy"
+            
         ></iframe>
     </div>
     <div className="contact-info">
