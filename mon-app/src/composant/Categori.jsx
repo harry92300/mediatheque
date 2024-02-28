@@ -65,21 +65,21 @@ const books = [
                 <div className="image-wrapper">
                   
                     <img src={Devello} alt="Livre 1" className="small-image1" />
-                    <button class="favorite styled" type="button">Fiction pour jeunes adultes</button>
+                    <button class="favorite styled" type="button">Fiction</button>
                     <p>Sarah Rivens(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button"> Comics, Super-héros</button>
+                    <button class="favorite styled" type="button"> Comics</button>
                     <p>Stan Lee et Juan Bobillo(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button">Sciences humaines</button>
+                    <button class="favorite styled" type="button">Sciences</button>
                     <p>Robert Mercier (Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -104,7 +104,7 @@ const books = [
                 
                 <div className="image-wrapper">
                     <img src={Reve} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Arts décoratifs</button>
+                    <button class="favorite styled" type="button"> Arts</button>
                     <p>Sibylline Meynet(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -121,14 +121,14 @@ const books = [
                 
                 <div className="image-wrapper">
                     <img src={Cedric} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button"> BDs humoristiques</button>
+                    <button class="favorite styled" type="button"> Bds H</button>
                     <p>Laudec et Raoul Cauvin(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Nancy} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Littérature anglo-saxonne</button>
+                    <button class="favorite styled" type="button"> Littérature</button>
                     <p>Nancy Tucker(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -145,14 +145,14 @@ const books = [
                 
                 <div className="image-wrapper">
                     <img src={Haiti} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button">Histoire littéraire</button>
+                    <button class="favorite styled" type="button">Histoire</button>
                     <p>Anthony Sr Kavanagh(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Espace} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Science-fiction</button>
+                    <button class="favorite styled" type="button"> Science-f</button>
                     <p>Colin Greenland(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
