@@ -52,7 +52,7 @@ body{
   }
   
   .categories-container img {
-    height: 100vh;
+    
     object-fit: cover;
   }
   .images404{
@@ -93,6 +93,22 @@ body{
     font-weight: bold; /* Exemple de style - à personnaliser selon vos besoins */
     color: #008000; /* Exemple de style - à personnaliser selon vos besoins */
   }
+
+  .small-image1{
+    display: block;
+    height: auto; 
+    margin-right: 10px; 
+    margin-bottom: 5px; 
+    border: 5px solid black;
+    border-radius: 10px; 
+    max-width: 300px; /* Ajustez cette valeur selon vos besoins */
+
+  }
+
+  .contien {
+    display: flex;
+    justify-content: space-between;
+}
   
   
 #carousel{
@@ -112,6 +128,22 @@ body{
     width: 50%; /* Ajustez cette valeur selon vos besoins */
   }
 }
+@media (max-width: 480px) {
+  .title3 {
+      font-size: 16px; /* Réduire davantage la taille du titre pour les petits écrans */
+  }
+
+  .small-image1 {
+      width: 90px; /* Réduire la taille des images pour les petits écrans */
+  }
+
+  .button {
+      font-size: 12px; /* Réduire la taille du texte du bouton pour les petits écrans */
+  }
+}
+
+
+
 
 
 

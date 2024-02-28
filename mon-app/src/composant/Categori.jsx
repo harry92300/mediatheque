@@ -22,18 +22,18 @@ const Categori = () => {
 
   
 const books = [
-  { title: 'Fiction pour jeunes adultes', author: 'Sarah Rivens', price: 12, image: Devello },
-  { title: 'Comics, Super-héros', author: 'Stan Lee et Juan Bobillo', price: 12, image: She },
-  { title: 'Sciences humaines', author: 'Robert Mercier', price: 12, image: Carrou },
+  { title: 'Fiction', author: 'Sarah Rivens', price: 12, image: Devello },
+  { title: 'Comics', author: 'Stan Lee et Juan Bobillo', price: 12, image: She },
+  { title: 'Sciences', author: 'Robert Mercier', price: 12, image: Carrou },
   { title: 'Poésie', author: 'Marie Boulic', price: 12, image: Chat },
   { title: 'Sports', author: 'Guillem Balagué', price: 12, image: Messi },
-  { title: 'Arts décoratifs', author: 'Sibylline Meynet', price: 12, image: Reve },
+  { title: 'Arts', author: 'Sibylline Meynet', price: 12, image: Reve },
   { title: 'Mangas', author: 'Keisuke Itagaki', price: 12, image: Baki },
-  { title: 'BDs humoristiques', author: 'Laudec et Raoul Cauvin', price: 12, image: Cedric },
-  { title: 'Littérature anglo-saxonne', author: 'Nancy Tucker', price: 12, image: Nancy },
+  { title: 'Bds H', author: 'Laudec et Raoul Cauvin', price: 12, image: Cedric },
+  { title: 'Littérature', author: 'Nancy Tucker', price: 12, image: Nancy },
   { title: 'Loisirs', author: 'Martin Handford', price: 1, image: Charlie },
-  { title: 'Histoire littéraire', author: 'Anthony Sr Kavanagh', price: 12, image: Haiti },
-  { title: 'Science-fiction', author: 'Colin Greenland', price: 12, image: Espace },
+  { title: 'Histoire', author: 'Anthony Sr Kavanagh', price: 12, image: Haiti },
+  { title: 'Science-F', author: 'Colin Greenland', price: 12, image: Espace },
  
 ];
 
@@ -64,21 +64,21 @@ const books = [
         
                 <div className="image-wrapper">
                   
-                    <img src={Devello} alt="Livre 1" className="small-image" />
+                    <img src={Devello} alt="Livre 1" className="small-image1" />
                     <button class="favorite styled" type="button">Fiction pour jeunes adultes</button>
                     <p>Sarah Rivens(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={She} alt="Livre 2" className="small-image" />
+                    <img src={She} alt="Livre 2" className="small-image1" />
                     <button class="favorite styled" type="button"> Comics, Super-héros</button>
                     <p>Stan Lee et Juan Bobillo(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Carrou} alt="Livre 3" className="small-image" />
+                    <img src={Carrou} alt="Livre 3" className="small-image1" />
                     <button class="favorite styled" type="button">Sciences humaines</button>
                     <p>Robert Mercier (Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
@@ -89,21 +89,21 @@ const books = [
 
         <div className='contien'>
                 <div className="image-wrapper">
-                    <img src={Chat} alt="Livre 1" className="small-image" />
+                    <img src={Chat} alt="Livre 1" className="small-image1" />
                     <button class="favorite styled" type="button"> Poésie</button>
                     <p>Marie Boulic(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Messi} alt="Livre 2" className="small-image" />
+                    <img src={Messi} alt="Livre 2" className="small-image1" />
                     <button class="favorite styled" type="button"> Sports</button>
                     <p>Guillem Balagué(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Reve} alt="Livre 3" className="small-image" />
+                    <img src={Reve} alt="Livre 3" className="small-image1" />
                     <button class="favorite styled" type="button"> Arts décoratifs</button>
                     <p>Sibylline Meynet(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
@@ -113,21 +113,21 @@ const books = [
 
             <div className='contien'>
                 <div className="image-wrapper">
-                    <img src={Baki} alt="Livre 1" className="small-image" />
+                    <img src={Baki} alt="Livre 1" className="small-image1" />
                     <button class="favorite styled" type="button">Mangas</button>
                     <p>Keisuke Itagaki(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Cedric} alt="Livre 2" className="small-image" />
+                    <img src={Cedric} alt="Livre 2" className="small-image1" />
                     <button class="favorite styled" type="button"> BDs humoristiques</button>
                     <p>Laudec et Raoul Cauvin(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Nancy} alt="Livre 3" className="small-image" />
+                    <img src={Nancy} alt="Livre 3" className="small-image1" />
                     <button class="favorite styled" type="button"> Littérature anglo-saxonne</button>
                     <p>Nancy Tucker(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
@@ -137,21 +137,21 @@ const books = [
 
             <div className='contien'>
                 <div className="image-wrapper">
-                    <img src={Charlie} alt="Livre 1" className="small-image" />
+                    <img src={Charlie} alt="Livre 1" className="small-image1" />
                     <button class="favorite styled" type="button">Loisirs</button>
                     <p>Martin Handford(Auteur) </p>
-                    <p className="price">Prix : 1 euros</p>
+                    <p className="price">Prix : 10 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Haiti} alt="Livre 2" className="small-image" />
+                    <img src={Haiti} alt="Livre 2" className="small-image1" />
                     <button class="favorite styled" type="button">Histoire littéraire</button>
                     <p>Anthony Sr Kavanagh(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
-                    <img src={Espace} alt="Livre 3" className="small-image" />
+                    <img src={Espace} alt="Livre 3" className="small-image1" />
                     <button class="favorite styled" type="button"> Science-fiction</button>
                     <p>Colin Greenland(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
