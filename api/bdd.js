@@ -53,7 +53,7 @@ app.post('/livres', (req, res) => {
 });
 
 
-// Route pour récupérer tous les livres
+// Route pour récupérer tous les livres 
 app.get('/livres', (req, res) => {
   connection.query('SELECT * FROM livres', (err, results) => {
     if (err) {

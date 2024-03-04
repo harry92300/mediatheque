@@ -1,6 +1,8 @@
+import '../style/Header.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../image/La de lecture bonne literature.mp4'
+
 
 export default function Header() {
   return (
