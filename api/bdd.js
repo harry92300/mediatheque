@@ -1,6 +1,11 @@
 import 'dotenv/config'
-import mysql from "mysql"
+import mysql from "mysql2"
+import cors from "cors"
+import express from "express"
+import bodyParser from "body-parser"
+import { config } from 'dotenv'
 
+config()
 const connection = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   user: process.env.DATABASE_USER,
@@ -8,14 +13,23 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE_NAME
 });
 
-module.exports = connection;
-const express = require('express');
-const bodyParser = require('body-parser');
-const connection = require('./db'); // Assurez-vous que le chemin du fichier de connexion est correct
+connection.connect(function(err) {
+  if (err) {
+    console.error('Erreur lors de la connexion à la base de données :', err.stack);
+    return;
+  }
+  console.log('Connecté à la base de données MySQL avec l\'ID', connection.threadId);
+});
+
 
 const app = express();
+app.use(express.json())
 app.use(bodyParser.json());
-
+app.use(cors())
+app.get('/cors', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.send({ "msg": "This has CORS enabled 🎈" });
+});
 app.post('/utilisateurs', (req, res) => {
   const { nom, prenom, email, motdepasse } = req.body;
   connection.query('INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasse], (err, results) => {
