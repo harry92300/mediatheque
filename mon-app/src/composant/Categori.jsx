@@ -68,7 +68,7 @@ const handleAddBook = () => {
                 <div className="image-wrapper">
                   
                     <img src={Devello} alt="Livre 1" className="small-image1" />
-                    <button class="favorite styled" type="button">Fiction</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Fiction</button>
                     <p>Sarah Rivens(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -94,21 +94,21 @@ const handleAddBook = () => {
         <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Chat} alt="Livre 1" className="small-image1" />
-                    <button class="favorite styled" type="button"> Poésie</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Poésie</button>
                     <p>Marie Boulic(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Messi} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button"> Sports</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Sports</button> 
                     <p>Guillem Balagué(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Reve} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Arts</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Arts</button>
                     <p>Sibylline Meynet(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -118,21 +118,21 @@ const handleAddBook = () => {
             <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Baki} alt="Livre 1" className="small-image1" />
-                    <button class="favorite styled" type="button">Mangas</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Mangas</button>
                     <p>Keisuke Itagaki(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Cedric} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button"> Bds H</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Bds H</button>
                     <p>Laudec et Raoul Cauvin(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Nancy} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Littérature</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Littérature</button>
                     <p>Nancy Tucker(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
@@ -142,21 +142,21 @@ const handleAddBook = () => {
             <div className='contien'>
                 <div className="image-wrapper">
                     <img src={Charlie} alt="Livre 1" className="small-image1" />
-                    <button class="favorite styled" type="button">Loisirs</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Loisirs</button>
                     <p>Martin Handford(Auteur) </p>
                     <p className="price">Prix : 10 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Haiti} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button">Histoire</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Histoire</button>
                     <p>Anthony Sr Kavanagh(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Espace} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button"> Science-f</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Science-f</button>
                     <p>Colin Greenland(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
