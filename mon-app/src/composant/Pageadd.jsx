@@ -5,6 +5,10 @@ import Devello from '../image/Captive-tome-1.jpg';
 
 
 export default function Pageadd() {
+    const handleDeleteBook = () => {
+        // Mettez ici la logique pour supprimer le livre
+        alert("Livre supprimé !");
+      };
   return (
     <div>
       <div className="book-profile">
@@ -21,7 +25,7 @@ export default function Pageadd() {
           <p>Prix: Prix du livre</p>
           <p>Nombre de pages: Nombre de pages du livre</p>
           <p>Description: Description du livre</p>
-         
+          <button onClick={handleDeleteBook}>Supprimer le livre</button>
         </div>
       </div>
 

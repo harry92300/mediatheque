@@ -36,7 +36,10 @@ const books = [
   { title: 'Science-F', author: 'Colin Greenland', price: 12, image: Espace },
  
 ];
-
+const handleAddBook = () => {
+  // Mettez ici la logique pour ajouter un livre
+  alert("Ajouter un livre !");
+};
   
 
   
@@ -72,14 +75,15 @@ const books = [
                 
                 <div className="image-wrapper">
                     <img src={She} alt="Livre 2" className="small-image1" />
-                    <button class="favorite styled" type="button"> Comics</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Comics</button>
                     <p>Stan Lee et Juan Bobillo(Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
                 
                 <div className="image-wrapper">
                     <img src={Carrou} alt="Livre 3" className="small-image1" />
-                    <button class="favorite styled" type="button">Sciences</button>
+                    <button onClick={handleAddBook} className="favorite styled" type="button">Sciences</button>
+
                     <p>Robert Mercier (Auteur) </p>
                     <p className="price">Prix : 12 euros</p>
                 </div>
