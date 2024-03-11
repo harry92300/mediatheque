@@ -30,13 +30,40 @@ app.get('/cors', (req, res) => {
   res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.send({ "msg": "This has CORS enabled 🎈" });
 });
+
+
 app.post('/utilisateurs', (req, res) => {
   const { nom, prenom, email, motdepasse } = req.body;
-  connection.query('INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasse], (err, results) => {
+  connection.query('INSERT INTO utilisateurs (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasse], (err, results) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
       res.json({ id: results.insertId, nom, prenom, email, motdepasse });
+    }
+  });
+});
+
+// Route pour mettre à jour un utilisateur existant
+app.put('/utilisateurs/:id', (req, res) => {
+  const userId = req.params.id;
+  const { nom, prenom, email, motdepasse } = req.body;
+  connection.query('UPDATE utilisateurs SET nom = ?, prenom = ?, email = ?, motdepasse = ? WHERE id = ?', [nom, prenom, email, motdepasse, userId], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json({ message: `Utilisateur avec l'ID ${userId} mis à jour avec succès` });
+    }
+  });
+});
+
+// Route pour supprimer un utilisateur
+app.delete('/utilisateurs/:id', (req, res) => {
+  const userId = req.params.id;
+  connection.query('DELETE FROM utilisateurs WHERE id = ?', [userId], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json({ message: `Utilisateur avec l'ID ${userId} supprimé avec succès` });
     }
   });
 });
@@ -79,6 +106,16 @@ app.get('/livres', (req, res) => {
 });
 
 // ... (routes pour mettre à jour et supprimer des livres)
+app.delete('/utilisateurs/:id', (req, res) => {
+  const userId = req.params.id;
+  connection.query('DELETE FROM utilisateurs WHERE id = ?', [userId], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json({ message: `Utilisateur avec l'ID ${userId} supprimé avec succès` });
+    }
+  });
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
