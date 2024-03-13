@@ -83,12 +83,12 @@ app.get('/utilisateurs', (req, res) => {
 
 
 app.post('/livres', (req, res) => {
-  const { titre, auteur, annee, empruntee, rendu } = req.body;
-  connection.query('INSERT INTO livres (titre, auteur, annee, empruntee, rendu) VALUES (?, ?, ?)', [titre, auteur, annee], (err, results) => {
+  const { titre, auteur, annee,images } = req.body;
+  connection.query('INSERT INTO livres (titre, auteur, annee, images) VALUES (?, ?, ?, ?)', [titre, auteur, annee, images], (err, results) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
-      res.json({ id: results.insertId, titre, auteur, annee, empruntee, rendu });
+      res.json({ id: results.insertId, titre, auteur, annee, images });
     }
   });
 });

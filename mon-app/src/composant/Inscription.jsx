@@ -1,9 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../style/Inscription.css';
 import { Link } from 'react-router-dom';
 import Inscri from '../image/Inscri.jpg';
 
 export default function Inscription() {
+    const [formData, setFormData] = useState({
+        nom: '',
+        prenom: '',
+        email: '',
+        motdepasse: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3000/utilisateurs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Erreur lors de la création de l\'utilisateur');
+            }
+
+            alert('Utilisateur créé avec succès !');
+            // Vous pouvez rediriger l'utilisateur vers une autre page après la création réussie de l'utilisateur
+        } catch (error) {
+            console.error('Erreur lors de la création de l\'utilisateur :', error.message);
+            alert('Une erreur s\'est produite lors de la création de l\'utilisateur. Veuillez réessayer plus tard.');
+        }
+    };
+
     return (
         <div>
             <div className="bloks3">
@@ -16,55 +52,29 @@ export default function Inscription() {
                     style={{ maxWidth: '750px' }}
                 />
                 <div id="container">
-                    <div className="container">
-                        <h1>S'inscrire</h1>
-                        <p>Veuillez remplir ce formulaire pour créer un compte.</p>
-                        <hr />
+                    <form action="" onSubmit={handleSubmit}>
+                        <div className="container">
+                            <h1>S'inscrire</h1>
+                            <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+                            <hr />
 
-                        <label htmlFor="email"><b>Email</b></label>
-                        <input type="text" placeholder="Entrez l'e-mail" name="email" required />
+                            <label htmlFor="email"><b>Email</b></label>
+                            <input type="text" onChange={handleChange} placeholder="Entrez l'e-mail" name="email" required />
 
-                        <label htmlFor="psw"><b>Mot de passe</b></label>
-                        <input type="password" placeholder="Entre votre Mot de passe" name="psw" required />
+                            <label htmlFor="psw"><b>Mot de passe</b></label>
+                            <input type="password" onChange={handleChange} placeholder="Entre votre Mot de passe" name="motdepasse" required />
 
-                        <label htmlFor="psw-repeat"><b>Répéter le mot de passe</b></label>
-                        <input type="password" placeholder="remettre votre Mot de passe" name="psw-repeat" required />
+                            <label>
+                                <input type="checkbox" onChange={handleChange} checked="checked" name="remember" style={{ marginBottom: '15px' }} /> Souviens-toi de moi
+                            </label>
 
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember" style={{ marginBottom: '15px' }} /> Souviens-toi de moi
-                        </label>
-
-
-                        <div className="clearfix">
-                            <button type="button" className="cancelbtn">Annuler</button>
-                            <button type="submit" className="signupbtn">S'inscrire</button>
+                            <div className="clearfix">
+                                <button type="button" className="cancelbtn">Annuler</button>
+                                <button type="submit" className="signupbtn">S'inscrire</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <p className="inscription-link">Déjà inscrit ? <Link to="/connexion">Connectez-vous</Link></p>
-                </div>
-            </div>
-
-            
-            <div className="footer">
-                <div className="map-container">
-                    <iframe
-                        title="Google Maps"
-                        src="https://maps.app.goo.gl/eYsTWth6AFNtWYfj6"
-                        width="400"
-                        height="300"
-                        allowFullScreen=""
-                        loading="lazy"
-                    ></iframe>
-                </div>
-                <div className="contact-info">
-                    <h2>Contactez-nous</h2>
-                    <p>Réseaux sociaux :</p>
-                    <ul>
-                        <li><a href="https://www.facebook.com/">Facebook</a></li>
-                        <li><a href="https://twitter.com/">Twitter</a></li>
-                        <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    </ul>
-                    <p>Numéro de téléphone : 33+ 1 23 34 45 56 </p>
                 </div>
             </div>
         </div>
