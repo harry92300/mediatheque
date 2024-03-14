@@ -41,12 +41,12 @@ const Categori = () => {
         {livre.map((item) => (
           <div key={item.idlivres}>
             <div className="small-imageZZ">
-              <img src={item.images} alt={item.titre} />
+              <img src={item.images} alt={item.titre} className="small-image" />
             </div>
             <p>nom: {item.titre}</p>
             <p>auteur: {item.auteur}</p>
             <p>annee: {item.annee}</p>
-            <button onClick={handleAddBook} className="favorite styled" type="button">Science-f</button>
+            <button onClick={handleAddBook} className="favorite styled" type="button">cliquez ici</button>
           </div>
         ))}
    
