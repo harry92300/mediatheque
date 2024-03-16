@@ -4,7 +4,7 @@ import cors from "cors"
 import express from "express"
 import bodyParser from "body-parser"
 import { config } from 'dotenv'
-
+import bcrypt from "bcrypt"
 config()
 const connection = mysql.createConnection({
   host: process.env.DATABASE_HOST,
@@ -27,20 +27,38 @@ app.use(express.json())
 app.use(bodyParser.json());
 app.use(cors())
 app.get('/cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3001');
   res.send({ "msg": "This has CORS enabled 🎈" });
 });
 
 
-app.post('/utilisateurs', (req, res) => {
+
+
+app.post('/utilisateurs', async (req, res) => {
   const { nom, prenom, email, motdepasse } = req.body;
-  connection.query('INSERT INTO utilisateurs (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasse], (err, results) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-    } else {
-      res.json({ id: results.insertId, nom, prenom, email, motdepasse });
-    }
-  });
+console.log(nom, prenom, email, motdepasse)
+  try {
+    // Générer le sel de hachage
+    const saltRounds = 10; // Définir le nombre de tours de hachage
+    const salt = await bcrypt.genSalt(saltRounds);
+
+    // Crypter le mot de passe avec le sel généré
+    const motdepasseCrypter = await bcrypt.hash(motdepasse, salt);
+
+    // Insérer l'utilisateur dans la base de données avec le mot de passe crypté
+    connection.query('INSERT INTO utilisateurs (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)', [nom, prenom, email, motdepasseCrypter], (err, results) => {
+      if (err) {
+        // En cas d'erreur, renvoyer un message d'erreur
+        res.status(500).json({ error: err.message });
+      } else {
+        // Si l'insertion est réussie, renvoyer les détails de l'utilisateur sans inclure le mot de passe
+        res.json({ id: results.insertId, nom, prenom, email });
+      }
+    });
+  } catch (error) {
+    // Attraper toute erreur survenue pendant le cryptage du mot de passe
+    res.status(500).json({ error: error.message });
+  }
 });
 
 // Route pour mettre à jour un utilisateur existant
