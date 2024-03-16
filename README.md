@@ -152,3 +152,114 @@
 
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    import React, { useState } from 'react';
+import '../style/Categori.css';
+import Carrousel1 from '../image/carrousel1.jpg';
+import Devello from '../image/Captive-tome-1.jpg';
+import She from '../image/sheHULG.jpeg';
+import Carrou from '../image/Devellopemntpersonnel.jpg';
+import Chat from '../image/leChatDuBois.jpeg';
+import Messi from '../image/Messi.jpeg';
+import Reve from '../image/Reve.jpeg';
+import Baki from '../image/Baki.jpeg';
+import Cedric from '../image/Cedric.jpeg';
+import Nancy from '../image/Nancy.jpeg';
+import Charlie from '../image/Charlie.jpeg';
+import Haiti from '../image/Haiti.jpeg';
+import Espace from '../image/Espace.jpeg';
+import axios from "axios"
+
+const Categori = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  // state => tableaux vide
+  const [livre, setLivre] = useState([]);
+
+const books = [
+  { title: 'Fiction', author: 'Sarah Rivens', price: 12, image: Devello },
+  { title: 'Comics', author: 'Stan Lee et Juan Bobillo', price: 12, image: She },
+  { title: 'Sciences', author: 'Robert Mercier', price: 12, image: Carrou },
+  { title: 'Poésie', author: 'Marie Boulic', price: 12, image: Chat },
+  { title: 'Sports', author: 'Guillem Balagué', price: 12, image: Messi },
+  { title: 'Arts', author: 'Sibylline Meynet', price: 12, image: Reve },
+  { title: 'Mangas', author: 'Keisuke Itagaki', price: 12, image: Baki },
+  { title: 'Bds H', author: 'Laudec et Raoul Cauvin', price: 12, image: Cedric },
+  { title: 'Littérature', author: 'Nancy Tucker', price: 12, image: Nancy },
+  { title: 'Loisirs', author: 'Martin Handford', price: 1, image: Charlie },
+  { title: 'Histoire', author: 'Anthony Sr Kavanagh', price: 12, image: Haiti },
+  { title: 'Science-F', author: 'Colin Greenland', price: 12, image: Espace },
+ 
+];
+
+
+
+
+axios.get('http://localhost:3000/livres')
+.then(response => 
+  // state => tbleaux du response.data
+  setLivre(response.data))
+.catch((error) => error.data)
+
+// TABLEAUX 
+console.log(livre)
+
+
+const handleAddBook = () => {
+  // Mettez ici la logique pour ajouter un livre
+  alert("Ajouter un livre !");
+};
+  
+  return (
+    
+    
+    <div className="contienv2">
+      
+    {livre.map((item) => (
+      <div key={item.idlivres}>
+        <div className=".small-image"><img src={item.images} alt={item.titre} /></div>
+
+        <p>nom: {item.titre}</p>
+        <p>auteur: {item.auteur}</p>
+        <p>annee: {item.annee}</p>
+        
+      </div>
+      
+    ))}
+    </div>
+  );
+};
+
+export default Categori;
