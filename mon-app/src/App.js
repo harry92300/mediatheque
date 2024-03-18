@@ -8,6 +8,7 @@ import Pageadd from './composant/Pageadd'
 
 
 import { Routes, Route } from "react-router-dom"
+import ModifierLivres from './composant/ModifierLivres';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       <Route path='/Connexion' element={<Connection/>} />
       <Route path='/Catégorie de Livre' element={<Categoei/>} />
       <Route path='/pageadd' element={<Pageadd/>} />
-
+      <Route path='/modifierlivres/:id' element={<ModifierLivres/>} />
 
     </Routes>
   );

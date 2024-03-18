@@ -126,32 +126,20 @@ app.get('/livres', (req, res) => {
 // ... (routes pour mettre à jour et supprimer des livres)
 app.delete('/livres/:id', (req, res) => {
   const livreId = req.params.id;
-  const { supprimer, titre, auteur, annee, empruntee, rendu } = req.body;
-
-  if (supprimer === true) {
-    connection.query('DELETE FROM livres WHERE id = ?', [livreId], (err, results) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.json({ message: `Livre avec l'ID ${livreId} supprimé avec succès` });
-      }
-    });
-  } else {
-    connection.query('UPDATE livres SET titre = ?, auteur = ?, annee = ?, empruntee = ?, rendu = ? WHERE id = ?', [titre, auteur, annee, empruntee, rendu, livreId], (err, results) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.json({ message: `Livre avec l'ID ${livreId} mis à jour avec succès` });
-      }
-    });
-  }
+  connection.query('DELETE FROM livres WHERE idlivres = ?', [livreId], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.json({ message: `Utilisateur avec l'ID ${livreId} supprimé avec succès` });
+    }
+  });
 });
 
 app.put('/livres/:id', (req, res) => {
   const livreId = req.params.id;
-  const { titre, auteur, annee, empruntee, rendu } = req.body;
+  const { titre, auteur, annee,images } = req.body;
 
-  connection.query('UPDATE livres SET titre = ?, auteur = ?, annee = ?, empruntee = ?, rendu = ? WHERE id = ?', [titre, auteur, annee, empruntee, rendu, livreId], (err, results) => {
+  connection.query('UPDATE livres SET titre = ?, auteur = ?, annee = ?, images = ? WHERE idlivres = ?', [titre, auteur, annee,images, livreId], (err, results) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {

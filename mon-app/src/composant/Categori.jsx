@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import '../style/Categori.css';
 import axios from 'axios';
 import Carrousel1 from '../image/carrousel1.jpg';
+import { useNavigate } from 'react-router-dom';
+
 
 const Categori = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [livre, setLivre] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios.get('http://localhost:3000/livres')
@@ -16,6 +19,18 @@ const Categori = () => {
     // Mettez ici la logique pour ajouter un livre
     alert("Ajouter un livre !");
   };
+  const handleDeleteBook = (id) => {
+    // Mettez ici la logique pour supprimer le livre
+    axios.delete(`http://localhost:3000/livres/${id}`)
+    .then(response => {
+      console.log(response.data)
+      window.location.reload()
+    })
+    .catch(error => console.error('Erreur', error))
+  };
+  
+  
+
   return (
     <div className="categories-container">
       <div className='image1'>
@@ -47,8 +62,14 @@ const Categori = () => {
             <p>auteur: {item.auteur}</p>
             <p>annee: {item.annee}</p>
             <button onClick={handleAddBook} className="favorite styled" type="button">cliquez ici</button>
+            <button onClick={() => handleDeleteBook(item.idlivres)}>supprimer</button>
+            <button onClick={() => navigate(`/modifierlivres/${item.idlivres}`)}>MAJ</button>
+
           </div>
         ))}
+
+
+        
    
     </div>
     <div className="footer">
