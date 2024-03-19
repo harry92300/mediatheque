@@ -11,7 +11,7 @@ export default function Header() {
             <ul>
                 <li><Link to="/">Bienvenue</Link></li>
                 <li><Link to="/Catégorie de Livre">Catégorie de Livre</Link></li>
-                <li><Link to="/Connexion">Connexion</Link></li>
+                <li><Link to="/Connexion">Connection</Link></li>
                 <li><Link to="/inscription">Inscription</Link></li>
             </ul>
         </nav>

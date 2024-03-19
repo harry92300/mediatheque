@@ -45,7 +45,9 @@ const handleSubmit = async (e) => {
                     className="responsive-image"
                     width="750px"
                     height="920px"
-                    style={{ maxWidth: '750px' }}
+                   
+
+                    style={{ maxWidth: '750px' , width: '100%', height: '100vh'}}
                 />
                 <div id="container">
                     <form action="" onSubmit={handleSubmit}>

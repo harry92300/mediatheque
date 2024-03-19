@@ -56,4 +56,16 @@ const ModifierLivres = () => {
   );
 };
 
+
+
 export default ModifierLivres;
+<div className="contact-info">
+<h2>Contactez-nous</h2>
+<p>Réseaux sociaux :</p>
+<ul>
+<li><a href="https://www.facebook.com/">Facebook</a></li>
+<li><a href="https://twitter.com/">Twitter</a></li>
+<li><a href="https://www.instagram.com/">Instagram</a></li>
+</ul>
+<p>Numéro de téléphone : 33+ 1 23 34 45 56</p>
+</div>
