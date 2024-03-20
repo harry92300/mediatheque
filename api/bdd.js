@@ -4,6 +4,7 @@ import cors from "cors"
 import express from "express"
 import bodyParser from "body-parser"
 import { config } from 'dotenv'
+import jwt from 'jsonwebtoken';
 import bcrypt from "bcrypt"
 config()
 const connection = mysql.createConnection({
@@ -33,10 +34,10 @@ app.get('/cors', (req, res) => {
 
 
 
-
+// Inscription
 app.post('/utilisateurs', async (req, res) => {
   const { nom, prenom, email, motdepasse } = req.body;
-console.log(nom, prenom, email, motdepasse)
+  console.log(nom, prenom, email, motdepasse)
   try {
     // Générer le sel de hachage
     const saltRounds = 10; // Définir le nombre de tours de hachage
@@ -60,6 +61,43 @@ console.log(nom, prenom, email, motdepasse)
     res.status(500).json({ error: error.message });
   }
 });
+
+// Route pour l'authentification et la génération du token
+app.post('/login', async (req, res) => {
+  const { email, motdepasse } = req.body;
+console.log(email, motdepasse)
+  try {
+    // Recherche de l'utilisateur dans la base de données
+    connection.query('SELECT * FROM utilisateurs WHERE email = ?', [email], async (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+
+      // Vérification si l'utilisateur existe
+      if (results.length === 0) {
+        return res.status(404).json({ error: 'Utilisateur non trouvé' });
+      }
+
+      const user = results[0]; // Première ligne de résultat
+      // console.log(user)
+
+      // Vérification du mot de passe
+      const motdepasseCorrect = bcrypt.compare(motdepasse, user.motdepasse);
+      if (!motdepasseCorrect) {
+        return res.status(401).json({ error: 'Mot de passe incorrect' });
+      }
+
+      // Génération du token JWT
+      const token = jwt.sign({ user: { id: user.id, email: user.email } }, process.env.SECRET_TOKEN);
+
+      // Envoi du token en réponse
+      res.json({ token, user: { id: user.id, email: user.email, nom: user.nom, prenom: user.prenom } });
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
 // Route pour mettre à jour un utilisateur existant
 app.put('/utilisateurs/:id', (req, res) => {

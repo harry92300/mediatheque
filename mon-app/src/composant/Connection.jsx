@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../style/Connection.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Connection() {
   const [formData, setFormData] = useState({
-    username: '',
-    password: ''
+    email: '',
+    motdepasse: ''
   });
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,14 +19,14 @@ export default function Connection() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/login', formData);
+      axios.post('http://localhost:3000/login', formData)
+      .then(response => {
+        console.log(response.data)
+        alert('Connexion réussie !');
+      navigate('/pageadd');
+      })
 
-      if (!response) {
-        throw new Error('Erreur lors de la connexion');
-      }
-
-      alert('Connexion réussie !');
-      // Vous pouvez rediriger l'utilisateur vers une autre page après la connexion réussie
+      
     } catch (error) {
       console.error('Erreur lors de la connexion :', error.message);
       alert('Une erreur s\'est produite lors de la connexion. Veuillez réessayer plus tard.');
@@ -40,10 +41,10 @@ export default function Connection() {
             <h2 className='mop'>Connexion</h2>
             
             <label><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrez votre nom d'utilisateur..." name="username" value={formData.username} onChange={handleChange} required />
+            <input type="text" placeholder="Entrez votre nom d'utilisateur..." name="email" value={formData.email} onChange={handleChange} required />
 
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrez votre mot de passe..." name="password" value={formData.password} onChange={handleChange} required />
+            <input type="password" placeholder="Entrez votre mot de passe..." name="motdepasse" value={formData.motdepasse} onChange={handleChange} required />
 
             <button type="submit">Se connecter</button>
           </form>

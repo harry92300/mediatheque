@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import '../style/Inscription.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Inscri from '../image/Inscri.jpg';
 import axios from 'axios';
 
 export default function Inscription() {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         nom: '',
         prenom: '',
@@ -26,7 +27,7 @@ const handleSubmit = async (e) => {
         if (!response) {
             throw new Error('Erreur lors de la création de l\'utilisateur');
         }
-
+        navigate('/Connexion')
         alert('Utilisateur créé avec succès !');
         // Vous pouvez rediriger l'utilisateur vers une autre page après la création réussie de l'utilisateur
     } catch (error) {
