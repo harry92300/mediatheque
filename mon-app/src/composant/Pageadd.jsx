@@ -9,6 +9,7 @@ export default function Pageadd() {
         // Mettez ici la logique pour supprimer le livre
         alert("Livre supprimé !");
       };
+      
   return (
     <div>
       <div className="book-profile">
@@ -26,6 +27,7 @@ export default function Pageadd() {
           <p>Nombre de pages: Nombre de pages du livre</p>
           <p>Description: Description du livre</p>
           <button onClick={handleDeleteBook}>Supprimer le livre</button>
+          <button onClick={handleDeleteBook}>déconnexion</button>
         </div>
       </div>
 
