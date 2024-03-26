@@ -87,7 +87,7 @@ console.log(email, motdepasse)
         return res.status(401).json({ error: 'Mot de passe incorrect' });
       }
 
-      // Génération du token JWT
+      // Génération du token JWT meth pour cree un token 
       const token = jwt.sign({ user: { id: user.id, email: user.email } }, process.env.SECRET_TOKEN);
 
       // Envoi du token en réponse
