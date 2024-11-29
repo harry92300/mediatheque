@@ -18,7 +18,7 @@ function Acc() {
             <img src={Book} alt="images" style={{ maxWidth: '1500px', width: '100%', height: '100vh' }} />
             <h1 className="title">de la bonne littérature</h1>
             </div>
-            <h2 className="title2">de la bonne littérature</h2>
+            <h2 className="title2">de la bonne littératur</h2>
             <div className="images-container2">
             <div className="image-wrapper">
                     <img src={Book1} alt="Livre 1" className="small-image" />
